@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HR Insight Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+
+    <aside class="sidebar">
+      <div class="workspace">
+  <span class="logo"></span>
+  <div>
+    <strong>Nosense Studio</strong>
+    <small>hello@nonsense.studio</small>
+  </div>
+</div>
+
+<input class="search" type="search" placeholder="Search">
+
+<ul class="menu">
+  <li class="active">Dashboard</li>
+  <li>Employee Directory</li>
+  <li>Attendance</li>
+  <li>Employee Performance</li>
+  <li>Leave Management</li>
+  <li>Payroll</li>
+  <li>Recruitment</li>
+  <li>Onboarding</li>
+  <li>Development</li>
+</ul>
+    </aside>
+
+    <main class="main">
+      <div class="topbar">
+  <nav class="crumbs">Dashboard / Overview</nav>
+  <div class="actions">
+    <button class="btn">+ Invite People</button>
+    <button class="btn primary">Generate Plan</button>
+  </div>
+</div>
+
+<div class="title-row">
+  <div>
+    <h1>HR Insight Dashboard</h1>
+    <p>Smart HR insights that drive better decisions</p>
+  </div>
+  <div class="actions">
+    <button class="btn">Export Data</button>
+    <button class="btn primary">+ New Entry</button>
+  </div>
+</div>
+<section class="stats">
+
+  <article class="card stat">
+    <header>
+      <span class="dot"></span>
+      <h3>Total Employee</h3>
+    </header>
+    <div class="val">
+      <b>272</b>
+      <small><em>+6%</em> last month</small>
+    </div>
+  </article>
+
+  <article class="card stat">
+    <header>
+      <span class="dot"></span>
+      <h3>New Employee</h3>
+    </header>
+    <div class="val">
+      <b>72</b>
+      <small><em>+4%</em> last month</small>
+    </div>
+  </article>
+
+  <article class="card stat">
+    <header>
+      <span class="dot"></span>
+      <h3>Resign Employee</h3>
+    </header>
+    <div class="val">
+      <b>16</b>
+      <small><em>+2%</em> last month</small>
+    </div>
+  </article>
+
+  <article class="card stat">
+    <header>
+      <span class="dot"></span>
+      <h3>Job Applicants</h3>
+    </header>
+    <div class="val">
+      <b>329</b>
+      <small><em>+8%</em> last month</small>
+    </div>
+  </article>
+
+</section>
+<section class="row two">
+
+  <article class="card perf">
+    <header class="card-head">
+      <h2>Team Performance</h2>
+    </header>
+
+    <div class="legend-row">
+      <div class="legend">
+        <span><i class="purple"></i>Project Team</span>
+        <span><i class="orange"></i>Product Team</span>
+      </div>
+      <div class="toggle">
+        <button>Monthly</button>
+        <button class="on">Yearly</button>
+      </div>
+    </div>
+
+    <svg class="chart" viewBox="0 0 460 160">
+      <!-- grid lines -->
+      <line x1="0" y1="20"  x2="460" y2="20"  class="gl"/>
+      <line x1="0" y1="60"  x2="460" y2="60"  class="gl"/>
+      <line x1="0" y1="100" x2="460" y2="100" class="gl"/>
+      <line x1="0" y1="140" x2="460" y2="140" class="gl"/>
+
+      <!-- purple line: Project Team -->
+      <polyline class="line purple-line"
+        points="20,55 60,45 100,55 140,50 180,40 220,48 260,52 300,42 340,46 380,35 420,30 450,18"/>
+
+      <!-- orange line: Product Team -->
+      <polyline class="line orange-line"
+        points="20,100 60,105 100,118 140,122 180,108 220,100 260,112 300,98 340,95 380,85 420,75 450,65"/>
+    </svg>
+
+    <div class="months">
+      <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span>
+      <span>May</span><span>Jun</span><span>Jul</span><span>Aug</span>
+      <span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span>
+    </div>
+  </article>
+    <article class="card attend">
+    <header class="card-head">
+      <h2>Attendance Report</h2>
+    </header>
+
+    <div class="heat">
+
+      <div class="cells">
+        <span class="t">11:00</span>
+        <i class="c1"></i><i class="c1"></i><i class="c1"></i><i class="c1"></i><i class="c1"></i>
+
+        <span class="t">10:30</span>
+        <i class="c2"></i><i class="c2"></i><i class="c2"></i><i class="c2"></i><i class="c2"></i>
+
+        <span class="t">10:00</span>
+        <i class="c3"></i><i class="c3"></i><i class="c3"></i><i class="c3"></i><i class="c3"></i>
+
+        <span class="t">09:30</span>
+        <i class="c3"></i><i class="c3"></i><i class="c4"></i><i class="c3"></i><i class="c3"></i>
+
+        <span class="t">09:00</span>
+        <i class="c4"></i><i class="c4"></i><i class="c5"></i><i class="c6"></i><i class="c6"></i>
+
+        <span class="t">08:30</span>
+        <i class="c7"></i><i class="c7"></i><i class="c7"></i><i class="c7"></i><i class="c7"></i>
+      </div>
+
+      <div class="days">
+        <span></span>
+        <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span>
+      </div>
+
+    </div>
+  </article>
+
+</section>
+    </main>
+
+  </div>
+</body>
+</html>
