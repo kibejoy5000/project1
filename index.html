@@ -1,181 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>HR Insight Dashboard</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HR Insight Dashboard</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="app">
+<div class="app">
 
-    <aside class="sidebar">
-      <div class="workspace">
-  <span class="logo"></span>
-  <div>
-    <strong>Nosense Studio</strong>
-    <small>hello@nonsense.studio</small>
-  </div>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="workspace"><span class="logo"></span><div><strong>Nosense Studio</strong><small>hello@nonsense.studio</small></div></div>
+    <label class="search"><span class="mag"></span><input type="search" placeholder="Search"><kbd>&#8984;+K</kbd></label>
+    <ul class="menu"><li class="active"><span class="ico"></span>Dashboard</li><li class=""><span class="ico"></span>Employee Directory</li><li class=""><span class="ico"></span>Attendance</li><li class=""><span class="ico"></span>Employee Performance</li><li class=""><span class="ico"></span>Leave Management</li><li class=""><span class="ico"></span>Payroll</li><li class=""><span class="ico"></span>Recruitment</li><li class=""><span class="ico"></span>Onboarding</li><li class=""><span class="ico"></span>Development</li></ul>
+    <ul class="menu bottom">
+      <li><span class="ico round"></span>Help Center</li>
+      <li><span class="ico round"></span>Settings</li>
+      <li class="danger"><span class="ico round"></span>Sign Out</li>
+    </ul>
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+    <div class="topbar">
+      <nav class="crumbs" aria-label="Breadcrumb">Dashboard <span>/</span> Overview</nav>
+      <div class="actions"><button class="btn">+ &nbsp;Invite People</button><button class="btn primary">Generate Plan</button></div>
+    </div>
+
+    <div class="title-row">
+      <div><h1>HR Insight Dashboard</h1><p>Smart HR insights that drive better decisions</p></div>
+      <div class="actions"><button class="btn"><span class="ring"></span>Export Data</button><button class="btn primary">+ &nbsp;New Entry</button></div>
+    </div>
+
+    <section class="stats"><article class="card stat"><header><span class="dot"></span><h3>Total Employee</h3><button class="more" aria-label="More">&bull;&bull;&bull;</button></header><div class="val"><b>272</b><small><em>+6%</em> last month</small></div></article><article class="card stat"><header><span class="dot"></span><h3>New Employee</h3><button class="more" aria-label="More">&bull;&bull;&bull;</button></header><div class="val"><b>72</b><small><em>+4%</em> last month</small></div></article><article class="card stat"><header><span class="dot"></span><h3>Resign Employee</h3><button class="more" aria-label="More">&bull;&bull;&bull;</button></header><div class="val"><b>16</b><small><em>+2%</em> last month</small></div></article><article class="card stat"><header><span class="dot"></span><h3>Job Applicants</h3><button class="more" aria-label="More">&bull;&bull;&bull;</button></header><div class="val"><b>329</b><small><em>+8%</em> last month</small></div></article></section>
+
+    <section class="row two">
+      <article class="card perf">
+        <header><h2>Team Performance</h2><button class="more" aria-label="More">&bull;&bull;&bull;</button></header>
+        <div class="legend-row">
+          <div class="legend"><span><i style="background:#5B45D6"></i>Project Team</span><span><i style="background:#F29A4A"></i>Product Team</span></div>
+          <div class="toggle"><button>Monthly</button><button class="on">Yearly</button></div>
+        </div>
+        <svg class="chart" viewBox="0 0 460 160" role="img" aria-label="Team performance line chart">
+<defs><linearGradient id="a1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7C5CE6" stop-opacity=".16"/><stop offset="1" stop-color="#7C5CE6" stop-opacity="0"/></linearGradient>
+<linearGradient id="a2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F29A4A" stop-opacity=".12"/><stop offset="1" stop-color="#F29A4A" stop-opacity="0"/></linearGradient></defs>
+<g class="grid"><line x1="20" y1="12" x2="457" y2="12"/><text x="0" y="14" class="ax">50K</text><line x1="20" y1="42" x2="457" y2="42"/><text x="0" y="44" class="ax">40K</text><line x1="20" y1="72" x2="457" y2="72"/><text x="0" y="74" class="ax">30K</text><line x1="20" y1="101" x2="457" y2="101"/><text x="0" y="103" class="ax">20K</text><line x1="20" y1="131" x2="457" y2="131"/><text x="0" y="133" class="ax">10K</text></g>
+<path d="M23 67 C26.7 65.3 38.5 57.2 45 57 C51.5 56.8 55.8 63.5 62 66 C68.2 68.5 75.5 71.7 82 72 C88.5 72.3 94.7 70.2 101 68 C107.3 65.8 113.7 61.7 120 59 C126.3 56.3 132.5 51.7 139 52 C145.5 52.3 152.5 58.5 159 61 C165.5 63.5 171.7 67.7 178 67 C184.3 66.3 190.7 59.3 197 57 C203.3 54.7 209.7 52.2 216 53 C222.3 53.8 228.7 59.5 235 62 C241.3 64.5 247.7 69.2 254 68 C260.3 66.8 266.7 58.5 273 55 C279.3 51.5 285.5 47.5 292 47 C298.5 46.5 305.3 50.7 312 52 C318.7 53.3 325.5 53.7 332 55 C338.5 56.3 344.5 60.5 351 60 C357.5 59.5 364.5 55.0 371 52 C377.5 49.0 383.5 44.8 390 42 C396.5 39.2 403.3 36.7 410 35 C416.7 33.3 423.5 33.2 430 32 C436.5 30.8 444.5 29.3 449 28 C453.5 26.7 455.7 24.7 457 24 L457 135 L23 135 Z" fill="url(#a1)"/><path d="M23 100 C26.7 99.3 38.5 94.7 45 96 C51.5 97.3 55.8 104.3 62 108 C68.2 111.7 75.5 115.5 82 118 C88.5 120.5 94.7 122.5 101 123 C107.3 123.5 113.7 122.8 120 121 C126.3 119.2 132.5 116.2 139 112 C145.5 107.8 152.5 99.3 159 96 C165.5 92.7 171.7 91.7 178 92 C184.3 92.3 190.7 94.7 197 98 C203.3 101.3 209.7 111.3 216 112 C222.3 112.7 228.7 105.7 235 102 C241.3 98.3 247.7 91.2 254 90 C260.3 88.8 266.7 92.3 273 95 C279.3 97.7 285.5 105.2 292 106 C298.5 106.8 305.3 102.2 312 100 C318.7 97.8 325.5 95.0 332 93 C338.5 91.0 344.5 89.8 351 88 C357.5 86.2 364.5 81.7 371 82 C377.5 82.3 383.5 90.3 390 90 C396.5 89.7 403.3 83.0 410 80 C416.7 77.0 423.5 74.0 430 72 C436.5 70.0 444.5 69.7 449 68 C453.5 66.3 455.7 63.0 457 62 L457 135 L23 135 Z" fill="url(#a2)"/>
+<path d="M23 67 C26.7 65.3 38.5 57.2 45 57 C51.5 56.8 55.8 63.5 62 66 C68.2 68.5 75.5 71.7 82 72 C88.5 72.3 94.7 70.2 101 68 C107.3 65.8 113.7 61.7 120 59 C126.3 56.3 132.5 51.7 139 52 C145.5 52.3 152.5 58.5 159 61 C165.5 63.5 171.7 67.7 178 67 C184.3 66.3 190.7 59.3 197 57 C203.3 54.7 209.7 52.2 216 53 C222.3 53.8 228.7 59.5 235 62 C241.3 64.5 247.7 69.2 254 68 C260.3 66.8 266.7 58.5 273 55 C279.3 51.5 285.5 47.5 292 47 C298.5 46.5 305.3 50.7 312 52 C318.7 53.3 325.5 53.7 332 55 C338.5 56.3 344.5 60.5 351 60 C357.5 59.5 364.5 55.0 371 52 C377.5 49.0 383.5 44.8 390 42 C396.5 39.2 403.3 36.7 410 35 C416.7 33.3 423.5 33.2 430 32 C436.5 30.8 444.5 29.3 449 28 C453.5 26.7 455.7 24.7 457 24" class="line project"/><path d="M23 100 C26.7 99.3 38.5 94.7 45 96 C51.5 97.3 55.8 104.3 62 108 C68.2 111.7 75.5 115.5 82 118 C88.5 120.5 94.7 122.5 101 123 C107.3 123.5 113.7 122.8 120 121 C126.3 119.2 132.5 116.2 139 112 C145.5 107.8 152.5 99.3 159 96 C165.5 92.7 171.7 91.7 178 92 C184.3 92.3 190.7 94.7 197 98 C203.3 101.3 209.7 111.3 216 112 C222.3 112.7 228.7 105.7 235 102 C241.3 98.3 247.7 91.2 254 90 C260.3 88.8 266.7 92.3 273 95 C279.3 97.7 285.5 105.2 292 106 C298.5 106.8 305.3 102.2 312 100 C318.7 97.8 325.5 95.0 332 93 C338.5 91.0 344.5 89.8 351 88 C357.5 86.2 364.5 81.7 371 82 C377.5 82.3 383.5 90.3 390 90 C396.5 89.7 403.3 83.0 410 80 C416.7 77.0 423.5 74.0 430 72 C436.5 70.0 444.5 69.7 449 68 C453.5 66.3 455.7 63.0 457 62" class="line product"/>
+<line x1="332" y1="10" x2="332" y2="135" class="cursor"/>
+<circle cx="332" cy="55" r="2.4" fill="#5B45D6"/><circle cx="332" cy="93" r="2.4" fill="#F29A4A"/>
+<g class="tip"><rect x="239" y="54" width="70" height="42" rx="5"/>
+<text x="244" y="65" class="tt">Sep, 2025</text>
+<circle cx="246" cy="75" r="2" fill="#5B45D6"/><text x="252" y="77" class="ts">Project Team</text><text x="304" y="77" text-anchor="end" class="ts b">38K</text>
+<circle cx="246" cy="87" r="2" fill="#F29A4A"/><text x="252" y="89" class="ts">Product Team</text><text x="304" y="89" text-anchor="end" class="ts b">24K</text></g>
+<g><text x="23" y="153" text-anchor="middle" class="ax">Jan</text><text x="62" y="153" text-anchor="middle" class="ax">Feb</text><text x="101" y="153" text-anchor="middle" class="ax">Mar</text><text x="139" y="153" text-anchor="middle" class="ax">Apr</text><text x="178" y="153" text-anchor="middle" class="ax">May</text><text x="216" y="153" text-anchor="middle" class="ax">Jun</text><text x="254" y="153" text-anchor="middle" class="ax">Jul</text><text x="292" y="153" text-anchor="middle" class="ax">Aug</text><text x="332" y="153" text-anchor="middle" class="ax on">Sep</text><text x="371" y="153" text-anchor="middle" class="ax">Oct</text><text x="410" y="153" text-anchor="middle" class="ax">Nov</text><text x="449" y="153" text-anchor="middle" class="ax">Dec</text></g></svg>
+      </article>
+      <article class="card attend">
+        <header><h2>Attendance Report</h2><button class="more" aria-label="More">&bull;&bull;&bull;</button></header>
+        <div class="heat"><div class="cells"><span class="t">11:00</span><i style="background:#F5F3FC"></i><i style="background:#F5F3FC"></i><i style="background:#F5F3FC"></i><i style="background:#F5F3FC"></i><i style="background:#F5F3FC"></i><span class="t">10:30</span><i style="background:#F1EEFB"></i><i style="background:#F1EEFB"></i><i style="background:#F1EEFB"></i><i style="background:#F1EEFB"></i><i style="background:#F1EEFB"></i><span class="t">10:00</span><i style="background:#EBE6FA"></i><i style="background:#EBE6FA"></i><i style="background:#EBE6FA"></i><i style="background:#EBE6FA"></i><i style="background:#EBE6FA"></i><span class="t">09:30</span><i style="background:#E3DCF8"></i><i style="background:#E3DCF8"></i><i style="background:#CDBFF2"></i><i style="background:#E3DCF8"></i><i style="background:#E3DCF8"></i><span class="t">09:00</span><i style="background:#CDBFF2"></i><i style="background:#CDBFF2"></i><i style="background:#B8A3EE"></i><i style="background:#A68BEA"></i><i style="background:#A68BEA"></i><span class="t">08:30</span><i style="background:#8B66E3"></i><i style="background:#8B66E3"></i><i style="background:#8B66E3"></i><i style="background:#8B66E3"></i><i style="background:#8B66E3"></i></div>
+          <div class="days"><span></span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span></div></div>
+      </article>
+    </section>
+
+    <section class="row three">
+      <article class="card emp">
+        <header><h2>Employees</h2><button class="more" aria-label="More">&bull;&bull;&bull;</button></header>
+        <table>
+          <thead><tr><th><input type="checkbox" aria-label="Select all"></th><th>Employee ID</th><th>Full Name</th><th>Email</th><th>Role</th><th>Department</th><th>Status</th></tr></thead>
+          <tbody><tr><td><input type="checkbox" aria-label="Select Cooper Herwitz"></td><td>#FR01890</td><td>Cooper Herwitz</td><td>cooper@mail.com</td><td>Jr. Developer</td><td>IT</td><td class="ok">Active</td></tr><tr><td><input type="checkbox" aria-label="Select Kierra Gouse"></td><td>#FR01728</td><td>Kierra Gouse</td><td>kierra@mail.com</td><td>UI Designer</td><td>Creative</td><td class="ok">Active</td></tr><tr><td><input type="checkbox" aria-label="Select Cheyenne Franci"></td><td>#FR01653</td><td>Cheyenne Franci</td><td>cheyennefci@mail.com</td><td>Development</td><td>HR</td><td class="ok">Active</td></tr><tr><td><input type="checkbox" aria-label="Select Charlie Saris"></td><td>#FR01832</td><td>Charlie Saris</td><td>charliesar@mail.com</td><td>Media Social</td><td>Marketing</td><td class="ok">Active</td></tr><tr><td><input type="checkbox" aria-label="Select Lindsey Mango"></td><td>#FR01728</td><td>Lindsey Mango</td><td>lindseymango@mail.com</td><td>Product Designer</td><td>Creative</td><td class="ok">Active</td></tr></tbody>
+        </table>
+      </article>
+      <article class="card jobs">
+        <header><h2>Jobs Overview</h2><button class="more" aria-label="More">&bull;&bull;&bull;</button></header>
+        <svg class="gauge" viewBox="20 20 160 90" role="img" aria-label="72 total jobs"><path d="M24.0 100.0 A76 76 0 0 1 131.3 30.7 L122.6 49.9 A55 55 0 0 0 45.0 100.0Z" fill="#8B66E3"/><path d="M132.1 31.1 A76 76 0 0 1 171.1 73.2 L151.5 80.6 A55 55 0 0 0 123.2 50.2Z" fill="#F29A4A"/><path d="M171.4 74.0 A76 76 0 0 1 176.0 100.0 L155.0 100.0 A55 55 0 0 0 151.7 81.2Z" fill="#5BE08A"/><text x="100" y="93" text-anchor="middle" class="big">72</text><text x="100" y="106" text-anchor="middle" class="ax">Total Jobs</text></svg>
+        <ul class="legend-list"><li><i style="background:#6B3FE0"></i><b>46</b><span>Active Jobs</span></li><li><i style="background:#F29A4A"></i><b>18</b><span>In Reviews Jobs</span></li><li><i style="background:#5BE08A"></i><b>8</b><span>Finish Jobs</span></li></ul>
+      </article>
+    </section>
+  </main>
 </div>
-
-<input class="search" type="search" placeholder="Search">
-
-<ul class="menu">
-  <li class="active">Dashboard</li>
-  <li>Employee Directory</li>
-  <li>Attendance</li>
-  <li>Employee Performance</li>
-  <li>Leave Management</li>
-  <li>Payroll</li>
-  <li>Recruitment</li>
-  <li>Onboarding</li>
-  <li>Development</li>
-</ul>
-    </aside>
-
-    <main class="main">
-      <div class="topbar">
-  <nav class="crumbs">Dashboard / Overview</nav>
-  <div class="actions">
-    <button class="btn">+ Invite People</button>
-    <button class="btn primary">Generate Plan</button>
-  </div>
-</div>
-
-<div class="title-row">
-  <div>
-    <h1>HR Insight Dashboard</h1>
-    <p>Smart HR insights that drive better decisions</p>
-  </div>
-  <div class="actions">
-    <button class="btn">Export Data</button>
-    <button class="btn primary">+ New Entry</button>
-  </div>
-</div>
-<section class="stats">
-
-  <article class="card stat">
-    <header>
-      <span class="dot"></span>
-      <h3>Total Employee</h3>
-    </header>
-    <div class="val">
-      <b>272</b>
-      <small><em>+6%</em> last month</small>
-    </div>
-  </article>
-
-  <article class="card stat">
-    <header>
-      <span class="dot"></span>
-      <h3>New Employee</h3>
-    </header>
-    <div class="val">
-      <b>72</b>
-      <small><em>+4%</em> last month</small>
-    </div>
-  </article>
-
-  <article class="card stat">
-    <header>
-      <span class="dot"></span>
-      <h3>Resign Employee</h3>
-    </header>
-    <div class="val">
-      <b>16</b>
-      <small><em>+2%</em> last month</small>
-    </div>
-  </article>
-
-  <article class="card stat">
-    <header>
-      <span class="dot"></span>
-      <h3>Job Applicants</h3>
-    </header>
-    <div class="val">
-      <b>329</b>
-      <small><em>+8%</em> last month</small>
-    </div>
-  </article>
-
-</section>
-<section class="row two">
-
-  <article class="card perf">
-    <header class="card-head">
-      <h2>Team Performance</h2>
-    </header>
-
-    <div class="legend-row">
-      <div class="legend">
-        <span><i class="purple"></i>Project Team</span>
-        <span><i class="orange"></i>Product Team</span>
-      </div>
-      <div class="toggle">
-        <button>Monthly</button>
-        <button class="on">Yearly</button>
-      </div>
-    </div>
-
-    <svg class="chart" viewBox="0 0 460 160">
-      <!-- grid lines -->
-      <line x1="0" y1="20"  x2="460" y2="20"  class="gl"/>
-      <line x1="0" y1="60"  x2="460" y2="60"  class="gl"/>
-      <line x1="0" y1="100" x2="460" y2="100" class="gl"/>
-      <line x1="0" y1="140" x2="460" y2="140" class="gl"/>
-
-      <!-- purple line: Project Team -->
-      <polyline class="line purple-line"
-        points="20,55 60,45 100,55 140,50 180,40 220,48 260,52 300,42 340,46 380,35 420,30 450,18"/>
-
-      <!-- orange line: Product Team -->
-      <polyline class="line orange-line"
-        points="20,100 60,105 100,118 140,122 180,108 220,100 260,112 300,98 340,95 380,85 420,75 450,65"/>
-    </svg>
-
-    <div class="months">
-      <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span>
-      <span>May</span><span>Jun</span><span>Jul</span><span>Aug</span>
-      <span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span>
-    </div>
-  </article>
-    <article class="card attend">
-    <header class="card-head">
-      <h2>Attendance Report</h2>
-    </header>
-
-    <div class="heat">
-
-      <div class="cells">
-        <span class="t">11:00</span>
-        <i class="c1"></i><i class="c1"></i><i class="c1"></i><i class="c1"></i><i class="c1"></i>
-
-        <span class="t">10:30</span>
-        <i class="c2"></i><i class="c2"></i><i class="c2"></i><i class="c2"></i><i class="c2"></i>
-
-        <span class="t">10:00</span>
-        <i class="c3"></i><i class="c3"></i><i class="c3"></i><i class="c3"></i><i class="c3"></i>
-
-        <span class="t">09:30</span>
-        <i class="c3"></i><i class="c3"></i><i class="c4"></i><i class="c3"></i><i class="c3"></i>
-
-        <span class="t">09:00</span>
-        <i class="c4"></i><i class="c4"></i><i class="c5"></i><i class="c6"></i><i class="c6"></i>
-
-        <span class="t">08:30</span>
-        <i class="c7"></i><i class="c7"></i><i class="c7"></i><i class="c7"></i><i class="c7"></i>
-      </div>
-
-      <div class="days">
-        <span></span>
-        <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span>
-      </div>
-
-    </div>
-  </article>
-
-</section>
-    </main>
-
-  </div>
 </body>
 </html>
